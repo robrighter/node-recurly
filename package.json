@@ -5,8 +5,8 @@
 , "homepage" : "https://github.com/robrighter/node-recurly"
 , "author" : "Rob Righter <robrighter@gmail.com> (http://github.com/robrighter)"
 , "contributors" : [ 
-  "Iván Guardado <dev.ivangc@gmail.com> (http://github.com/IvanGuardado)"
-  "Rob Righter <robrighter@gmail.com> (http://github.com/robrighter)", 
+  "Iván Guardado <dev.ivangc@gmail.com> (http://github.com/IvanGuardado)",
+  "Rob Righter <robrighter@gmail.com> (http://github.com/robrighter)"
   ]
 , "bugs" :
   { "web" : "https://github.com/robrighter/node-recurly/issues" }
