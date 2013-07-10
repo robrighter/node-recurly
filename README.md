@@ -42,9 +42,9 @@ http://docs.recurly.com/api/accounts
 
 	recurly.accounts.close(accountcode, callback)
 
-    recurly.accounts.reopen(accountcode, callback)
+	recurly.accounts.reopen(accountcode, callback)
 
-    recurly.accounts.list(callback, filter)
+	recurly.accounts.list(callback, filter)
 
 
 Billing Information
@@ -116,7 +116,7 @@ Recurly.js
 ===============
 http://docs.recurly.com/api/recurlyjs/reference#server-fetch
 
-    recurly.js.fetch(token, callback)
+	recurly.js.fetch(token, callback)
 
 
 Subscriptions
