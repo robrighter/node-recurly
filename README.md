@@ -11,21 +11,21 @@ Installation
 
 add a config file to your project that has contents similar to:
 
-		module.exports = {
-			API_USERNAME: 'secret',
-			API_PASSWORD: 'secret',
-			PRIVATE_KEY:  'secret',
-			SUBDOMAIN:    '[your_account]',
-			ENVIRONMENT:  'sandbox',
-			DEBUG: false
-		};
+	module.exports = {
+		API_USERNAME: 'secret',
+		API_PASSWORD: 'secret',
+		PRIVATE_KEY:  'secret',
+		SUBDOMAIN:    '[your_account]',
+		VERSION:      '2',
+		DEBUG:        false
+	};
 
 
 Usage
 ===============
 
-		var Recurly = require('node-recurly');
-		var recurly = new Recurly(require('./config'));
+	var Recurly = require('node-recurly');
+	var recurly = new Recurly(require('./config'));
 
 After that, just call the methods below:
 
@@ -42,9 +42,10 @@ http://docs.recurly.com/api/accounts
 
 	recurly.accounts.close(accountcode, callback)
 
-  recurly.accounts.reopen(accountcode, callback)
+    recurly.accounts.reopen(accountcode, callback)
 
-  recurly.accounts.list(callback, filter)
+    recurly.accounts.list(callback, filter)
+
 
 Billing Information
 ===============
@@ -52,12 +53,9 @@ http://docs.recurly.com/api/billing-info
 
 	recurly.billingInfo.update(accountcode, details, callback)
 
-
 	recurly.billingInfo.get(accountcode, callback)
 
-
 	recurly.billingInfo.remove(accountcode, callback)
-
 
 
 Adjustments
@@ -83,6 +81,7 @@ http://docs.recurly.com/api/coupons
 
 	recurly.coupons.deactivate(couponcode, callback)
 
+
 Coupon Redemtion
 =================
 http://docs.recurly.com/api/coupons/coupon-redemption
@@ -94,7 +93,6 @@ http://docs.recurly.com/api/coupons/coupon-redemption
 	recurly.couponRedemption.remove(accountcode, callback)
 
 	recurly.couponRedemption.getByInvoice(invoicenumber, callback)
-
 
 
 Invoices
@@ -118,7 +116,7 @@ Recurly.js
 ===============
 http://docs.recurly.com/api/recurlyjs/reference#server-fetch
 
-  recurly.js.fetch(token, callback)
+    recurly.js.fetch(token, callback)
 
 
 Subscriptions
@@ -158,6 +156,7 @@ http://docs.recurly.com/api/plans
 
 	recurly.plans.remove(plancode, callback)
 
+
 Plan Add-ons
 ==================
 http://docs.recurly.com/api/plans/add-ons
@@ -179,14 +178,10 @@ http://docs.recurly.com/api/transactions
 
 	recurly.transactions.list(callback, filter)
 
-
 	recurly.transactions.listByAccount(accountcode, callback, filter)
-
 
 	recurly.transactions.get(id, callback)
 
-
 	recurly.transactions.create(details, callback)
-
 
 	recurly.transactions.refund(id, callback, amount)
