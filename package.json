@@ -14,7 +14,7 @@
 , "main" : "./lib/recurly.js"
 , "dependencies" : {
     "xml2js": ">= 0.1.5",
-    "js2xml": ">= 0.0.2"
+    "js2xml": "git://github.com/SocialBro/js2xml"
 }
 , "engines" : { "node" : ">= 0.4" }
 }
