@@ -15,7 +15,7 @@
 , "main" : "./lib/recurly.js"
 , "dependencies" : {
     "xml2js": ">= 0.4.0",
-    "js2xml": "philjackson/js2xml"
+    "js2xml": "pomeo/js2xml"
 }
 , "engines" : { "node" : ">= 0.4" }
 }
