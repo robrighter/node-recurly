@@ -13,7 +13,7 @@
 , "directories" : { "lib" : "./lib" }
 , "main" : "./lib/recurly.js"
 , "dependencies" : {
-    "xml2js": ">= 0.1.5",
+    "xml2js": "0.4.18",
     "js2xml": "git://github.com/SocialBro/js2xml"
 }
 , "engines" : { "node" : ">= 0.4" }
