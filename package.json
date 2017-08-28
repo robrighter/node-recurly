@@ -1,20 +1,30 @@
-{ "name" : "node-recurly"
-, "description" : "Library for accessing the api for the Recurly recurring billing service."
-, "keywords" : [ "recurly", "e-commerce", "recurring billing" ]
-, "version" : "2.1.0"
-, "homepage" : "https://github.com/robrighter/node-recurly"
-, "author" : "Rob Righter <robrighter@gmail.com> (http://github.com/robrighter)"
-, "contributors" : [ 
-  "Iván Guardado <dev.ivangc@gmail.com> (http://github.com/IvanGuardado)",
-  "Rob Righter <robrighter@gmail.com> (http://github.com/robrighter)"
-  ]
-, "bugs" :
-  { "web" : "https://github.com/robrighter/node-recurly/issues" }
-, "directories" : { "lib" : "./lib" }
-, "main" : "./lib/recurly.js"
-, "dependencies" : {
+{
+  "name": "node-recurly",
+  "description": "Library for accessing the api for the Recurly recurring billing service.",
+  "keywords": [
+    "recurly",
+    "e-commerce",
+    "recurring billing"
+  ],
+  "version": "2.1.1",
+  "homepage": "https://github.com/robrighter/node-recurly",
+  "author": "Rob Righter <robrighter@gmail.com> (http://github.com/robrighter)",
+  "contributors": [
+    "Iván Guardado <dev.ivangc@gmail.com> (http://github.com/IvanGuardado)",
+    "Rob Righter <robrighter@gmail.com> (http://github.com/robrighter)"
+  ],
+  "bugs": {
+    "web": "https://github.com/robrighter/node-recurly/issues"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib/recurly.js",
+  "dependencies": {
     "xml2js": "0.4.18",
     "js2xml": "git://github.com/SocialBro/js2xml"
-}
-, "engines" : { "node" : ">= 0.4" }
+  },
+  "engines": {
+    "node": ">= 0.4"
+  }
 }

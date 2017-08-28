@@ -4,7 +4,39 @@ const assert = require('assert');
 const jsToXml = require('../lib/jsToXml');
 
 describe('JS to XML converter', () => {
-	
+
+	it('should build an add a custom root to the final xml correctly', () => {
+		const input = {
+			plan_code: 'ac5_ct20_bt500_tm1_c0_p1005',
+		  name: 'Custom Plan',
+		  unit_amount_in_cents: { USD: '1005', EUR: '854', GBP: '754' },
+		  plan_interval_length: 1,
+		  plan_interval_unit: 'months',
+		  tax_code: 'digital',
+		  success_url: 'https://buy.audiense.com/signup_done?plan={{plan_code}}',
+		  cancel_url: 'https://buy.audiense.com/signup_canceled',
+		  bypass_hosted_confirmation: 'true'
+		};
+		const expected = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<plan>
+  <plan_code>ac5_ct20_bt500_tm1_c0_p1005</plan_code>
+  <name>Custom Plan</name>
+  <unit_amount_in_cents>
+    <USD>1005</USD>
+    <EUR>854</EUR>
+    <GBP>754</GBP>
+  </unit_amount_in_cents>
+  <plan_interval_length>1</plan_interval_length>
+  <plan_interval_unit>months</plan_interval_unit>
+  <tax_code>digital</tax_code>
+  <success_url>https://buy.audiense.com/signup_done?plan={{plan_code}}</success_url>
+  <cancel_url>https://buy.audiense.com/signup_canceled</cancel_url>
+  <bypass_hosted_confirmation>true</bypass_hosted_confirmation>
+</plan>`;
+		const output = jsToXml(input, 'plan');
+		assert.equal(output, expected);
+	});
+
   it('should build an entire object correctly', () => {
 		const output = jsToXml(input());
 		assert.equal(output, expected());
